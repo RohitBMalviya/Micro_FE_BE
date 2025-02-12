@@ -99,7 +99,30 @@ go mod init project_name
 ## 2. Node (ts)
 
 ```
+npm init or npm init -y
+npm install --save-dev typescript
+npx tsc --init
+```
 
+### Setup Husky Prettier & Eslint For Node.ts
+
+```
+npm install --save-dev husky
+npx husky init
+npm install --save-dev eslint
+npm init @eslint/config@latest
+npm install --save-dev --save-exact prettier
+```
+
+### Add configuration into package.json For For Node.ts
+
+```
+"scripts": {
+    "prepare": "cd .. && husky node_project_ecommerce/.husky",
+    "lint": "next lint",
+    "format": "npx prettier . --write",
+    "format:check": "npx prettier . --check"
+}
 ```
 
 ## 3. Django
