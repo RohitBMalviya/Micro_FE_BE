@@ -1,0 +1,17 @@
+# Ignore artifacts:
+build
+coverage
+
+
+**/.git
+**/.svn
+**/.hg
+**/node_modules
+
+tsconfig.json
+
+
+package-lock.json
+package.json
+
+eslint.config.js
