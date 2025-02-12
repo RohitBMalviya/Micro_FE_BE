@@ -56,7 +56,7 @@ npx husky init
 npm install --save-dev --save-exact prettier
 ```
 
-### Add configuration into package.json For For Next.Js
+### Add configuration into package.json For Next.Js
 
 ```
 "scripts": {
@@ -80,7 +80,7 @@ npm install --save-dev husky
 npx husky init
 ```
 
-### Add configuration into package.json For For Svelte
+### Add configuration into package.json For Svelte
 
 ```
 "scripts": {
@@ -114,7 +114,7 @@ npm init @eslint/config@latest
 npm install --save-dev --save-exact prettier
 ```
 
-### Add configuration into package.json For For Node.ts
+### Add configuration into package.json For Node.ts
 
 ```
 "scripts": {
