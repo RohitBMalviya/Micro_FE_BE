@@ -4,8 +4,6 @@ repos:
     hooks:
       - id: check-yaml
       - id: trailing-whitespace
-        exclude: django_project_ecommerce/
-
   - repo: https://github.com/psf/black
     rev: 22.10.0
     hooks:
