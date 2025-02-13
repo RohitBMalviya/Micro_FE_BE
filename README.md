@@ -128,5 +128,11 @@ npm install --save-dev --save-exact prettier
 ## 3. Django
 
 ```
+django-admin startproject project_name
+```
 
+### Setup Husky Prettier & Eslint For Django
+
+```
+pip install pre-commit
 ```
