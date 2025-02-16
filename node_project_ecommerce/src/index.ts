@@ -1,11 +1,16 @@
-import express from 'express';
-const app = express();
-const port = 3000;
+import { config } from './utils';
+import app from './app';
+import dotenv from 'dotenv';
+import connectDB from './database';
 
-app.get('/', (req, res) => {
-  res.send('Hello World!');
-});
+dotenv.config({ path: './env' });
+
+const port = config.PORT || 4001;
+
+connectDB()
+  .then(() => console.log('Database Connected Successfully !!!.'))
+  .catch((error) => console.log('Database Connection Failed,', error));
 
 app.listen(port, () => {
-  return console.log(`Express is listening at http://localhost:${port}`);
+  console.log(`Server Is Running On Port http://localhost:${port}`);
 });
