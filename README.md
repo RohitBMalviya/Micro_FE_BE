@@ -189,3 +189,30 @@ repos:
     hooks:
       - id: black
 ```
+
+# **\*** Backstage **\***
+
+```
+npx @backstage/create-app@latest backstage_name
+```
+
+## Run BackStage
+
+```
+yarn dev
+```
+
+### Setup Husky For BackStage
+
+```
+yarn add --dev husky
+yarn husky init
+```
+
+### Add configuration into package.json For BackStage
+
+```
+"scripts": {
+  "prepare": "cd .. && husky backstage-micro-fe-be/.husky",
+}
+```
