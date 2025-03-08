@@ -14,6 +14,34 @@ Next.Js -> Node -> MongoDB
 Svelte -> Django -> MySQL
 ```
 
+## **\*** Backend
+
+```
+Golang -> Postgres -> ProdcutService
+```
+
+```
+Node -> MongoDB -> AuthService
+```
+
+```
+Django -> MySQL -> OrderService
+```
+
+## **\*** Frontend
+
+```
+Angular -> Product and Order
+```
+
+```
+Next.Js -> User
+```
+
+```
+Svelte -> Dashbard
+```
+
 # **\*** Frontend Project Setup **\***
 
 ## 1. Angular
