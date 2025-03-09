@@ -1,12 +1,11 @@
 linters:
   # See the dedicated "linters" documentation section.
-  diable:
+  enable:
     - exhaustruct
     - gochecknoglobals
     - mnd
     - depguard
     - lll
-  enable:
     - asasalint
     - asciicheck
     - bidichk
