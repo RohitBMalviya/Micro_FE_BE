@@ -22,7 +22,7 @@ func main() {
 
 	router := gin.Default()
 
-	router.Use(utils.CorsOrigin())
+	router.Use(config.CorsOrigin())
 
 	fmt.Println("Server is Running on http://localhost:" + config.GetConfig().Port)
 
