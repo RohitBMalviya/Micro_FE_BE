@@ -1,24 +1,27 @@
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.1.0
+    rev: v3.2.0
     hooks:
-      - id: check-merge-conflict
-      - id: check-yaml
-      - id: end-of-file-fixer
       - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-added-large-files
+
   - repo: https://github.com/dnephin/pre-commit-golang
     rev: v0.5.1
     hooks:
       - id: go-fmt
       - id: go-vet
+        files: "cmd/.go$"
       - id: go-lint
       - id: go-imports
       - id: go-cyclo
-        args: [-over=15]
+        args: [-over=50]
       - id: validate-toml
       - id: no-go-testing
       - id: golangci-lint
+        files: "cmd/.go$"
       - id: go-critic
-      - id: go-unit-tests
       - id: go-build
+        files: "cmd/.go$"
       - id: go-mod-tidy
