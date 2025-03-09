@@ -13,6 +13,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+// Main Function Heart of Application
 func main() {
 	initConfigErr := utils.InitConfig()
 	if initConfigErr != nil {

@@ -11,14 +11,17 @@ repos:
     rev: v0.5.1
     hooks:
       - id: go-fmt
-      # - id: go-vet
+      - id: go-vet
+        files: "cmd/.go$"
       - id: go-lint
       - id: go-imports
       - id: go-cyclo
         args: [-over=50]
       - id: validate-toml
       - id: no-go-testing
-      # - id: golangci-lint
+      - id: golangci-lint
+        files: "cmd/.go$"
       - id: go-critic
-      # - id: go-build
+      - id: go-build
+        files: "cmd/.go$"
       - id: go-mod-tidy
