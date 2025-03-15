@@ -1,0 +1,6 @@
+cd next_project_ecommerce
+
+npm run lint
+npm run format
+npm run format:check
+git status

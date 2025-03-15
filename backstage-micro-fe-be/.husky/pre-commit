@@ -1,0 +1,6 @@
+cd backstage-micro-fe-be
+
+yarn lint
+yarn lint:all
+yarn prettier:check
+yarn format
