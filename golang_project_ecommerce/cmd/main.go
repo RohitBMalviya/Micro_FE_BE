@@ -7,10 +7,14 @@ import (
 	"time"
 
 	"golang_project_ecommerce/config"
+	"golang_project_ecommerce/controllers"
 	"golang_project_ecommerce/database"
+	implRepository "golang_project_ecommerce/repository/impl"
+	"golang_project_ecommerce/routers"
+	implService "golang_project_ecommerce/services/Impl"
 	"golang_project_ecommerce/utils"
 
-	"github.com/gin-gonic/gin"
+	"github.com/go-playground/validator/v10"
 )
 
 // Main Function Heart of Application
@@ -20,13 +24,22 @@ func main() {
 		utils.Logger.Println("Error init config fail.")
 	}
 
-	router := gin.Default()
+	db := database.Connection()
+	validate := validator.New()
 
-	router.Use(config.CorsOrigin())
+	//Init Repository
+	repository := implRepository.NewProductRepositoryImpl(db)
+
+	//Init Service
+	service := implService.NewProductServiceImpl(repository, validate)
+
+	//Init controller
+	controller := controllers.NewProductController(service)
+
+	//Router
+	router := routers.NewRouter(controller)
 
 	fmt.Println("Server is Running on http://localhost:" + config.GetConfig().Port)
-
-	database.Connection()
 
 	server := &http.Server{
 		Addr:           ":" + config.GetConfig().Port,
