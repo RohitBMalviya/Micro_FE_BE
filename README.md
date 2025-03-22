@@ -201,6 +201,8 @@ django-admin startproject project_name
 pip install pre-commit
 add .pre-commit-config.yaml
 create .pre-commit-config.yaml file
+python3/py/python -m venv .venv
+python manage.py startapp app_name
 ```
 
 ### Add configuration into .pre-commit-config.yaml For golang
